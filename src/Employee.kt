@@ -1,4 +1,4 @@
-class Employee {
+class Employee : ReportGenerator{
 
     private var fullName: String = "SDA"
     private var position: String = "Manager"
@@ -31,6 +31,10 @@ class Employee {
     fun updateYearsOfExperience(value: Int) {
         yearsOfExperience = value
     }
+
+    override fun generateReport(): String = println("ФИО: $fullName\nДолжность: $position\nЗарплата: $salary руб. \nСтаж работы: $yearsOfExperience ").toString()
+
+
 }
 
 
@@ -39,6 +43,10 @@ class Employee {
 fun main() {
 
     val test = Employee()
+
+    test.generateReport()
+
+    println("")
 
     test.updateSalary(-10)
     println("Зарплата: ${test.salary}")
