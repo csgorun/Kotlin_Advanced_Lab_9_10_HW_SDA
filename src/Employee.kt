@@ -32,6 +32,10 @@ class Employee {
         yearsOfExperience = value
     }
 }
+
+
+
+
 fun main() {
 
     val test = Employee()
@@ -50,4 +54,6 @@ fun main() {
 
     test.updateYearsOfExperience(10)
     println("Опыт: ${test.yearsOfExperience}")
+
+
 }
